@@ -1,0 +1,97 @@
+#user-profile-view{
+    display: none;
+}
+#pages{
+    display: block;
+}
+body{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 250px auto;
+    padding-left: 250px;
+}
+.body{
+    margin-left: 20px;
+    margin-right: 250px;
+}
+.navbar-brand{
+    display: inline;
+}
+.navbar-nav {
+    display: inline;
+}
+.nav-item{
+    margin-left: 50px;margin-top: 30px;
+}
+.menu{
+    height: inherit;
+    background-color: rgb(233, 244, 248);
+    border-radius: 15px;
+    margin-top: 5px;
+}
+#new-post{
+    margin-top: 5px;
+}
+#div_new_post{
+    padding-top: 5px;
+}
+.input_new_post{
+    display:grid;
+    grid-template-columns: auto 75px;
+}
+#content{
+    width:100%;
+    border-right: unset;
+    border-top: unset;
+    border-bottom-left-radius: 10px;
+    border-bottom-width: 3px;
+}
+#text_div{
+    padding-right: 5px;
+    height: 100%;
+}
+#post{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color:unset;
+    border-style: unset;
+}
+#post:hover{
+    background-color: whitesmoke;
+}
+.post{
+    background-color:white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid 2px whitesmoke;
+}
+.post:hover{
+    background-color: whitesmoke;
+}
+.like_comment_edit{
+    display: grid;
+    grid-template-columns: auto auto 50px;
+}
+.like_comment_edit > button{
+    width: 100%;
+    height: 100%;
+    border-color: whitesmoke;
+    background-color: unset;
+    border-style: unset;
+}
+fid{
+    color: grey;
+}
+.all_post_body{
+    height:90vh;
+    overflow-y: hidden;
+}
+.all_post_body:hover{
+    overflow-y: scroll;
+    scrollbar-color: unset unset;
+    scrollbar-width: thin;
+
+}

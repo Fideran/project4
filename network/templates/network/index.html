@@ -1,0 +1,56 @@
+{% extends "network/layout.html" %}
+{% load static %}
+{% block body %}
+<!--USER PROFILE-->
+    <div id="user-profile-view">
+        <div id="profile"></div>
+    </div>
+<!--PROFILE WHEN THE POST IS CLICKED-->
+    <div id="profile_view">
+        <div id="other_profile"></div>
+    </div>
+ 
+<!--ALL POSTS-->
+    <div id="all-post-view" >
+        <div class="all_post_body">
+            <div id="new-post">
+                <div id="div_new_post">
+                    <form id='new_form' method="POST">
+                        {% if user.is_authenticated %}
+                        <div class="input_new_post">
+                            <div id="text_div"><input class="form-control" type="text"  id="content" placeholder="Start a post"  /></div>
+                            <div><input type="submit" value="Post" id="post" ></div>
+                        </div>
+                        <hr>
+                        {% endif %}
+                    </form>
+                    </div>
+            </div>
+            
+            <div id="all-post"></div>
+        </div>
+        <div id="pages">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    {% for page in pages %}
+                  <li class="page-item"><a class="page-link" href="#" data-value={{page}}>{{page}}</a></li>
+                    {% endfor %}
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>    
+            </div>
+    </div>
+
+<!--EDIT VIEW-->
+    <div id="edit_view">
+        <form action="" id="edit_form">
+            <textarea name="edit" id="text_edit" cols="30" rows="5"></textarea>
+            <button type="submit" >Save</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/network.js' %}"></script>
+{% endblock %}
